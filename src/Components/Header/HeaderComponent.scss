@@ -1,0 +1,133 @@
+.header {
+  background-color: #095e8c;
+  height: 16vh;
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+
+  &_logo {
+    display: flex;
+    left: 1vw;
+    position: relative;
+    width: 15%;
+
+    img {
+      height: 7vh;
+      width: 14vw;
+      position: relative;
+    }
+  }
+
+  // .card{
+  //   display: flex;
+
+  .cd-3 {
+    border-radius: 30px 30px;
+    width: 45vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: #196e9d;
+    box-shadow: 9px 9px 9px 9px #25485b;
+    position: relative;
+    // right: 15vw;
+    // margin-left: 25vw;
+    margin-left: 10vw;
+    border: 2px rgb(214, 14, 14) solid;
+    animation: blinker 1s linear infinite;
+
+
+    &_notifications {
+      // color: black;
+      display: flex;
+      align-items: center;
+      font-size: 2vw;
+      font-weight: normal;
+      // width: 48%;
+      flex-direction: column;
+      position: relative;
+      margin-left: 5vw;
+      // right: 15vw;
+      margin-top: 1px;
+      
+    }
+  }
+
+  // }
+
+  // &_notifications {
+  //   color: black;
+  //   display: flex;
+  //   align-items: center;
+  //   font-size: 2vw;
+  //   font-weight: normal;
+  //   width: 48%;
+  //   flex-direction: column;
+  //   position: relative;
+  //   margin-left: 20vw;
+  //   margin-top: 1px;
+  // }
+
+  &_profile {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    flex-direction: row;
+    width: 114vw;
+
+    &--greetName {
+      padding: 10px;
+      color: white;
+      position: relative;
+    }
+
+    &--greet {
+      color: white;
+      display: flex;
+      align-items: center;
+      font-size: 1.2vw;
+      font-weight: bold;
+      width: 6vw;
+      margin-right: 50px;
+      position: relative;
+      text-transform: capitalize;
+    }
+
+    &--img {
+      display: flex;
+      align-items: center;
+
+      img {
+        border-radius: 50%;
+        width: 5vw;
+        height: 10vh;
+      }
+    }
+  }
+}
+
+h5 {
+  color: white;
+  // color: red;
+  font-family: "Georgia", Times, serif;
+  font-style: oblique;
+  font-size: 1.2vw;
+  width: 80vh;
+  flex-direction: row;
+  display: inline-block;
+  margin: 1px;
+
+}
+
+h2 {
+  color: black;
+  font-size: 1.3vw;
+  width: 80vh;
+  flex-direction: row;
+  display: inline-block;
+  margin: 1px;
+}

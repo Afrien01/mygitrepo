@@ -1,0 +1,62 @@
+// .container {
+//     &_right-2 {
+//         display: flex;
+//         align-items: flex-start;
+//         justify-content: flex-start;
+//         flex-direction: column;
+//         // margin-top: 10vh;
+
+//         &--state {
+//             display: flex;
+//             flex-direction: column;
+//         }
+
+//         @keyframes blinker {
+//             from {
+//                 opacity: 1;
+//             }
+
+//             to {
+//                 opacity: 0;
+//             }
+//         }
+//     }
+// }
+
+// .card {
+//     &-stats {
+//         display: flex;
+//         width: 20vw;
+//         flex-direction: column;
+//         background-color: #3d3d3d;
+
+//         &--header {
+//             height: 7vh;
+//             background: #3d3d3d;
+//             width: inherit;
+//             color: white;
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//             font-size: 1rem;
+//         }
+
+//         &--body {
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//             background: white;
+//             height: 28.5vh;
+//         }
+
+//         &-seatbelt {
+//             .card-stats--body {
+//                 flex-direction: column;
+//             }
+
+//             img {
+//                 height: 10vh;
+//             }
+//         }
+//     }
+// }
