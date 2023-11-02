@@ -33,7 +33,7 @@ export const App = () => {
   const webcamRef = useRef<Webcam>(null);
   const [imgSrc, setImgSrc] = useState<string | null>(null);
   //convertToblobfile
-
+  var DROWSY_COUNTER = 0
   function b64toBlob(b64Data: string, contentType: string, sliceSize: number) {
     contentType = contentType || "";
     sliceSize = sliceSize || 512;
@@ -137,8 +137,18 @@ export const App = () => {
             // const receiveTimestamp = new Date().getTime(); // Timestamp after receiving
             if (response.ok) {
               const data = await response.json();
-              setstatus(data.status); // Set the messages in state 
-              console.log("drowsiness-detect response", data.status)
+              if(data.status === 'Drowsy'){
+                DROWSY_COUNTER += 1;
+              }
+              else{
+                DROWSY_COUNTER = 0;
+                setstatus(data.status); // Set the messages in state
+              }
+
+              if (DROWSY_COUNTER >= 4){
+                setstatus(data.status); // Set the messages in state
+              }
+              console.log("drowsiness-detect response", data.status, " Counter", DROWSY_COUNTER)
               // const requestDuration = receiveTimestamp - sendTimestamp;
               // console.log('Request duration for Drowsiness-detect-api:', requestDuration, 'ms');
             } else {
