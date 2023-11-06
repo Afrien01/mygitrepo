@@ -10,5 +10,3 @@ phases:
 artifacts:
   files: 'build/**/*'  # Include all files in the build output directory
   name: MyBuildArtifacts
-  # discard-paths: no
-  # build-directory: build
