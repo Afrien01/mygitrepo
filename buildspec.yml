@@ -8,7 +8,7 @@ phases:
     commands:
       - npm run build
 artifacts:
-  files: '**/*'  # Include all files in the build output directory
+  files: 'build/**/*'  # Include all files in the build output directory
   name: MyBuildArtifacts
   # discard-paths: no
   # build-directory: build
