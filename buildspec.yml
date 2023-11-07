@@ -4,10 +4,12 @@ phases:
   pre_build:
     commands:
       - npm install
+      - mkdir -p /tmp/artifacts
+      - cp -r ./build/* /tmp/artifacts
   build:
     commands:
       - npm run build
 artifacts:
   files: 'build/**/*'  # Include all files in the build output directory
-  base-directory: './build'
+  base-directory: '/tmp/artifacts'
   name: MyBuildArtifacts
