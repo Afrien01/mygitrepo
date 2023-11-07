@@ -10,7 +10,7 @@ phases:
   post_build:
     commands:
       - mkdir -p /tmp/artifacts
-      - cp -r ./build/* /tmp/artifacts
+      - cp -r ./build/**/* /tmp/artifacts
 
 artifacts:
   files: 'build/**/*'
