@@ -8,10 +8,8 @@ phases:
     commands:
       - npm run build
   post_build:
-    commands:
-      - mkdir -p /tmp/artifacts
-      - cp -r ./build/**/* /tmp/artifacts
+    - mkdir -p /tmp/artifacts
+      - cp -r build/* /tmp/artifacts  # Copy build artifacts to a temporary directory
 
 artifacts:
-  files: 'build/**/*'
-  base-directory: '/tmp/artifacts'
+  files: /tmp/artifacts/**/*
