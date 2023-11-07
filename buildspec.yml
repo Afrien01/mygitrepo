@@ -7,10 +7,11 @@ phases:
   build:
     commands:
       - npm run build
+  post_build:
+    commands:
+      - mkdir -p /tmp/artifacts
+      - cp -r ./build/* /tmp/artifacts
+
 artifacts:
-  files: 'build/**/*'  # Include all files in the build output directory
-  commands:
-    - mkdir -p /tmp/artifacts
-    - cp -r ./build/* /tmp/artifacts
+  files: 'build/**/*'
   base-directory: '/tmp/artifacts'
-  name: MyBuildArtifacts
